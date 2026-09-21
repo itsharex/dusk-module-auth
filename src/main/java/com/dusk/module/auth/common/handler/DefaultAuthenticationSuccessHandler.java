@@ -4,7 +4,7 @@ import com.dusk.common.core.model.UserContext;
 import com.dusk.common.core.response.BaseApiResult;
 import com.dusk.module.auth.common.manage.TokenAuthManager;
 import com.dusk.module.auth.service.ICaptchaService;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.databind.ObjectMapper;
 import jakarta.annotation.Resource;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

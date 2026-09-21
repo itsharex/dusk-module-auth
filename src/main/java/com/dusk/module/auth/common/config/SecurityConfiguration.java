@@ -5,7 +5,7 @@ import com.dusk.module.auth.common.handler.DefaultAuthenticationFailureHandler;
 import com.dusk.module.auth.common.handler.DefaultAuthenticationSuccessHandler;
 import com.dusk.module.auth.common.provider.DefaultAuthenticationProvider;
 import com.dusk.module.auth.service.ICaptchaService;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.databind.ObjectMapper;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationEventPublisher;
