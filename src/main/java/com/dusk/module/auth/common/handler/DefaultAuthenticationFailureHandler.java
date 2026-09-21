@@ -5,7 +5,7 @@ import com.dusk.common.core.jwt.exception.JwtExpiredTokenException;
 import com.dusk.common.core.response.BaseApiResult;
 import com.dusk.module.auth.service.ICaptchaService;
 import com.dusk.module.auth.service.impl.UserServiceImpl;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.databind.ObjectMapper;
 import jakarta.annotation.Resource;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

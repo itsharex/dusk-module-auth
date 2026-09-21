@@ -4,14 +4,14 @@ import com.dusk.common.core.exception.BusinessException;
 import com.dusk.common.core.redis.RedisUtil;
 import com.dusk.module.auth.dto.administrativeregions.RegionsDto;
 import com.dusk.module.auth.service.IAdministrativeRegionsService;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.core.JacksonException;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.ObjectMapper;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.Resource;
 import lombok.SneakyThrows;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -78,7 +78,7 @@ public class AdministrativeRegionsServiceImpl implements IAdministrativeRegionsS
         try {
             streetMap = objectMapper.readValue(this.getClass().getResourceAsStream(STREET_PATH), new TypeReference<>() {
             });
-        } catch (IOException e) {
+        } catch (JacksonException e) {
             throw new BusinessException("序列化错误");
         }
 

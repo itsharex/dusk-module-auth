@@ -3,8 +3,8 @@ package com.dusk.module.auth.mapper;
 import com.dusk.common.rpc.auth.dto.notification.CreateNotificationInput;
 import com.dusk.module.auth.dto.notification.NotificationOutput;
 import com.dusk.module.auth.entity.Notification;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.ObjectMapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;
@@ -29,7 +29,7 @@ public interface NotificationMapper {
         }
         try {
             return new ObjectMapper().writeValueAsString(value);
-        } catch (JsonProcessingException e) {
+        } catch (JacksonException e) {
             throw new RuntimeException("Failed to serialize pageNavigation", e);
         }
     }
